@@ -8,6 +8,9 @@ public class HandController : MonoBehaviour
     private Vector2 mouse;
     
     public GameObject spear;
+
+    private float curTime;
+    private float fireRate = 1.5f;
     
     void Start()
     {
@@ -20,9 +23,11 @@ public class HandController : MonoBehaviour
         angle = Mathf.Atan2(mouse.y, mouse.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle + 90);
         
-        if (Input.GetMouseButtonDown(0))
+        curTime += Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) && curTime > fireRate)
         {
             Shoot();
+            curTime = 0;
         }
     }
     
