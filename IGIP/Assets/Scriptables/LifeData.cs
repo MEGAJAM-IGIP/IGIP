@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Scriptables
 {
@@ -7,6 +7,8 @@ namespace Scriptables
     {
         public Sprite liveSprite;
         public Sprite deadSprite;
+        public AudioClip hitSound;
         public int health;
+        public int score;
     }
 }
