@@ -42,7 +42,7 @@ public class SceneSystem : MonoBehaviour
             return;
         }
         
-        DontDestroyOnLoad(instance);
+        DontDestroyOnLoad(gameObject);
     }
     
     public void SceneChange(int sceneNumber)
