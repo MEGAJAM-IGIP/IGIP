@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Plastic bag
   m_EditorClassIdentifier: 
   wasteName: Plastic bag
-  wasteType: 0
+  wasteSound: {fileID: 0}
+  score: 2
   minSpeed: 1.5
   maxSpeed: 2.5

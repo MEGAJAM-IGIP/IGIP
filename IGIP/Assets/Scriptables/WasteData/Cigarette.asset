@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Cigarette
   m_EditorClassIdentifier: 
   wasteName: Cigarette
-  wasteType: 4
-  minSpeed: 1
-  maxSpeed: 2.5
+  wasteSound: {fileID: 0}
+  score: 5
+  minSpeed: 2
+  maxSpeed: 5

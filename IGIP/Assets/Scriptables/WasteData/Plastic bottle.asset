@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Plastic bottle
   m_EditorClassIdentifier: 
   wasteName: Plastic bottle
-  wasteSprite: {fileID: 0}
-  wasteType: 0
+  wasteSound: {fileID: 0}
+  score: 2
   minSpeed: 0.5
   maxSpeed: 1.5
