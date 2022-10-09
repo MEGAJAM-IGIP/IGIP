@@ -15,7 +15,6 @@ public class WasteData : ScriptableObject
         Glass
     };
     public string wasteName;
-    public Sprite wasteSprite;
     public WasteType wasteType;
 
     [Header("waste move Speed")]
