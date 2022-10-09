@@ -7,6 +7,7 @@ public class Life : MonoBehaviour
     [SerializeField] private LifeData lifeData;
     private Sprite curSprite;
     public int curHealth;
+    public Vector2 moveDir;
     public void Start()
     {
         curSprite = lifeData.liveSprite;
@@ -16,7 +17,7 @@ public class Life : MonoBehaviour
     public void Die()
     {
         curSprite = lifeData.deadSprite;
-        // 물고기 위로 뜨는 거 구현
+        Destroy(gameObject, 3f);
     }
 
     public void OnTriggerEnter2D(Collider2D col)
@@ -34,5 +35,6 @@ public class Life : MonoBehaviour
     public void OnBecameInvisible()
     {
         Destroy(this);
+        GameManager.Instance.GetScore(lifeData.score);
     }
 }
