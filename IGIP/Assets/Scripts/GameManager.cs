@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver;
     
+    public int score;
+    public float curTime;
+    
     private void Awake()
     {
         var objs = FindObjectsOfType<GameManager>();
@@ -53,5 +56,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void GetScore(int addScore)
+    {
+        score += addScore;
     }
 }
