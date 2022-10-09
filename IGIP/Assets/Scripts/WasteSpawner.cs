@@ -29,7 +29,7 @@ public class WasteSpawner : MonoBehaviour
 
     public IEnumerator CreateWaste()
     {
-        while (!GameManager.instance.isGameOver)
+        while (!GameManager.Instance.isGameOver)
         {
             int randNum = Random.Range(0, wastes.Length);
             wastes[randNum].moveDir = moveDir;
