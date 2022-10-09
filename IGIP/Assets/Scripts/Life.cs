@@ -30,4 +30,9 @@ public class Life : MonoBehaviour
             }
         }
     }
+
+    public void OnBecameInvisible()
+    {
+        Destroy(this);
+    }
 }
