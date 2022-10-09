@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2974cb24c49a3f4db086d823b2e81e0, type: 3}
-  m_Name: Plastic bag
+  m_Name: Plastic bottle
   m_EditorClassIdentifier: 
-  wasteName: 
-  score: 0
+  wasteName: Plastic bottle
+  wasteSprite: {fileID: 0}
+  wasteType: 0
+  minSpeed: 0.5
+  maxSpeed: 1.5
