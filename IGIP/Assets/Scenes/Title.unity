@@ -698,11 +698,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2031138428}
         m_TargetAssemblyTypeName: SceneSystem, Assembly-CSharp
-        m_MethodName: SetHelpPanel
-        m_Mode: 6
+        m_MethodName: SetPanel
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1866666848}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2029,11 +2029,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2031138428}
         m_TargetAssemblyTypeName: SceneSystem, Assembly-CSharp
-        m_MethodName: SetHelpPanel
-        m_Mode: 6
+        m_MethodName: SetPanel
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1866666848}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2106,7 +2106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60995d961acbf5744a99d73e448eb4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  helpPanel: {fileID: 1866666848}
+  isGameOver: 0
 --- !u!4 &2031138429
 Transform:
   m_ObjectHideFlags: 0
