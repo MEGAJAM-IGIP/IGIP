@@ -1253,7 +1253,7 @@ GameObject:
   - component: {fileID: 1625737167}
   - component: {fileID: 1625737166}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Help Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1321,8 +1321,8 @@ MonoBehaviour:
     Improve game satisfaction through mission
     clearing and raise awareness about the environment
 
-    We have a game goal
-    to inspire
+    We have a game goal to
+    inspire
 
 '
   m_isRightToLeft: 0
