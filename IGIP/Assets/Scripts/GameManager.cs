@@ -5,19 +5,44 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    private static GameManager instance;
+
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                var obj = FindObjectOfType<GameManager>();
+
+                if (obj != null)
+                {
+                    instance = obj;
+                }
+                else
+                {
+                    var newObj = new GameObject().AddComponent<GameManager>();
+                    instance = newObj;
+                    newObj.name = "GameManager";
+                }
+            }
+
+            return instance;
+        }
+    }
 
     public bool isGameOver;
     
     private void Awake()
     {
-        if (instance != null)
+        var objs = FindObjectsOfType<GameManager>();
+        if (objs.Length != 1)
         {
-            Debug.Log("instance is not null");
+            Destroy(gameObject);
             return;
         }
 
-        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -27,6 +52,6 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        
+
     }
 }

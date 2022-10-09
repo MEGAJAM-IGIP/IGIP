@@ -5,14 +5,53 @@ using UnityEngine.SceneManagement;
 
 public class SceneSystem : MonoBehaviour
 {
-    public GameObject helpPanel;
+    private static SceneSystem instance;
+
+    public static SceneSystem Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                var obj = FindObjectOfType<SceneSystem>();
+
+                if (obj != null)
+                {
+                    instance = obj;
+                }
+                else
+                {
+                    var newObj = new GameObject().AddComponent<SceneSystem>();
+                    instance = newObj;
+                    newObj.name = "SceneSystem";
+                }
+            }
+
+            return instance;
+        }
+    }
+
+    public bool isGameOver;
+    
+    private void Awake()
+    {
+        var objs = FindObjectsOfType<SceneSystem>();
+        if (objs.Length != 1)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        DontDestroyOnLoad(instance);
+    }
+    
     public void SceneChange(int sceneNumber)
     {
         SceneManager.LoadScene(sceneNumber);
     }
 
-    public void SetHelpPanel(bool b)
+    public void SetPanel(GameObject panel)
     {
-        helpPanel.SetActive(b);
+        panel.SetActive(!panel.activeSelf);
     }
 }
