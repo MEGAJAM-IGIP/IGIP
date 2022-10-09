@@ -10,7 +10,7 @@ public class HandController : MonoBehaviour
     public GameObject spear;
 
     private float curTime;
-    private float fireRate = 1.5f;
+    private float fireRate = 1f;
     
     void Start()
     {
