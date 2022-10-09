@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2974cb24c49a3f4db086d823b2e81e0, type: 3}
   m_Name: Cigarette
   m_EditorClassIdentifier: 
-  wasteName: 
-  score: 0
+  wasteName: Cigarette
+  wasteType: 4
+  minSpeed: 1
+  maxSpeed: 2.5

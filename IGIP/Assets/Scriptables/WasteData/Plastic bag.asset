@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Plastic bag
   m_EditorClassIdentifier: 
   wasteName: Plastic bag
-  wasteSprite: {fileID: 0}
   wasteType: 0
-  minSpeed: 0
-  maxSpeed: 0
+  minSpeed: 1.5
+  maxSpeed: 2.5
