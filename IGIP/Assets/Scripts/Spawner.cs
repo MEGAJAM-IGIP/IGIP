@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WasteSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     public Waste[] wastes;
     public Vector2 moveDir;
@@ -29,12 +29,13 @@ public class WasteSpawner : MonoBehaviour
 
     public IEnumerator CreateWaste()
     {
+        float randWaitTime = Random.Range(1f, 3.5f);
         while (!GameManager.Instance.isGameOver)
         {
             int randNum = Random.Range(0, wastes.Length);
             wastes[randNum].moveDir = moveDir;
             Instantiate(wastes[randNum],ReturnRandomPos() , transform.rotation);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(randWaitTime);
         }
     }
 }
