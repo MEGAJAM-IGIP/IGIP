@@ -55,10 +55,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        timeText = GetComponent<Text>();
-        scoreText = GetComponent<Text>();
+        curTime = startTime;
         scoreText.text = "Score: " + score;
-        timeText.text = "Time: " + startTime;
+        timeText.text = "Time: " + curTime;
     }
     
     void Update()
