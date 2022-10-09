@@ -23,6 +23,8 @@ public class Waste : MonoBehaviour
         if (col.gameObject.CompareTag("Spear"))
         {
             Destroy(gameObject);
+            GameManager.Instance.GetScore(wasteData.score);
+            
         }
     }
 
