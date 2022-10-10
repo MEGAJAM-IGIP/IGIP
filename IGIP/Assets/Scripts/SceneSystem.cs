@@ -32,7 +32,7 @@ public class SceneSystem : MonoBehaviour
     }
 
     public bool isGameOver;
-    
+
     private void Awake()
     {
         var objs = FindObjectsOfType<SceneSystem>();

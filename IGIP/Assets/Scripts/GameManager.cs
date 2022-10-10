@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
     
     public Text timeText;
     public Text scoreText;
+    public Text endScoreText;
+
+    public GameObject timeOutPanel;
     
     private void Awake()
     {
@@ -70,6 +73,8 @@ public class GameManager : MonoBehaviour
         {
             curTime = 0f;
             isGameOver = true;
+            endScoreText.text = "Score: " + score;
+            SceneSystem.Instance.SetPanel(timeOutPanel);
         }
         timeText.text = "Time: " + Mathf.Round(curTime);
     }
