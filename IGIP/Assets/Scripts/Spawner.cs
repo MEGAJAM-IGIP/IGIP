@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
     public IEnumerator CreateWaste()
     {
         float randWaitTime = Random.Range(1f, 3.5f);
-        while (!GameManager.Instance.isGameOver)
+        while (!GameManager.instance.isGameOver)
         {
             int randNum = Random.Range(0, wastes.Length);
             var waste = wastes[randNum];

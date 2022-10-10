@@ -27,7 +27,7 @@ public class Waste : MonoBehaviour
         {
             audioSource.Play();
             Destroy(gameObject);
-            GameManager.Instance.GetScore(wasteData.score);
+            GameManager.instance.GetScore(wasteData.score);
             
         }
     }
