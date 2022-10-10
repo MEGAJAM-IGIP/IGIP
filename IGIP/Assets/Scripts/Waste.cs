@@ -8,8 +8,11 @@ public class Waste : MonoBehaviour
     public float curSpeed;
     public Vector2 moveDir;
 
+    private AudioSource audioSource;
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         curSpeed = Random.Range(wasteData.minSpeed, wasteData.maxSpeed);
     }
 
@@ -22,6 +25,7 @@ public class Waste : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Spear"))
         {
+            audioSource.Play();
             Destroy(gameObject);
             GameManager.Instance.GetScore(wasteData.score);
             
