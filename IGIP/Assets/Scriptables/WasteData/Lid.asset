@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lid
   m_EditorClassIdentifier: 
   wasteName: Lid
-  wasteSound: {fileID: 0}
+  wasteSound: {fileID: 8300000, guid: bbd34f388be9c654d9fb787bfc841e3d, type: 3}
   score: 4
   minSpeed: 1
   maxSpeed: 3

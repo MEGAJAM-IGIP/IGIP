@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Styrofoam
   m_EditorClassIdentifier: 
   wasteName: Styrofoam
-  wasteSound: {fileID: 0}
+  wasteSound: {fileID: 8300000, guid: 46b9d7539bb3f3248b6b06cf71e8d4f7, type: 3}
   score: 0
   minSpeed: 0
   maxSpeed: 0

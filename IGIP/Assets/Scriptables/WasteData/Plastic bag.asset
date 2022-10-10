@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Plastic bag
   m_EditorClassIdentifier: 
   wasteName: Plastic bag
-  wasteSound: {fileID: 0}
+  wasteSound: {fileID: 8300000, guid: 3e3ddf2c56f6c344e94adae4671b7123, type: 3}
   score: 2
   minSpeed: 1.5
   maxSpeed: 2.5
