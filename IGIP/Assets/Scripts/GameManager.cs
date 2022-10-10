@@ -6,31 +6,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
+    public SceneSystem sceneSystem;
 
-    public static GameManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                var obj = FindObjectOfType<GameManager>();
-
-                if (obj != null)
-                {
-                    instance = obj;
-                }
-                else
-                {
-                    var newObj = new GameObject().AddComponent<GameManager>();
-                    instance = newObj;
-                    newObj.name = "GameManager";
-                }
-            }
-
-            return instance;
-        }
-    }
+    public static GameManager instance;
 
     public bool isGameOver;
     
@@ -46,18 +24,20 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        var objs = FindObjectsOfType<GameManager>();
-        if (objs.Length != 1)
+        if (instance != null)
         {
-            Destroy(gameObject);
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        instance = this;
     }
 
     void Start()
     {
+        score = 0;
+        curTime = startTime;
+        isGameOver = false;
+        
         curTime = startTime;
         scoreText.text = "Score: " + score;
         timeText.text = "Time: " + curTime;
@@ -69,18 +49,19 @@ public class GameManager : MonoBehaviour
         {
             curTime -= Time.deltaTime;
         }
-        else
+        else if(isGameOver == false)
         {
             curTime = 0f;
             isGameOver = true;
             endScoreText.text = "Score: " + score;
-            SceneSystem.Instance.SetPanel(timeOutPanel);
+            sceneSystem.SetPanel(timeOutPanel);
         }
         timeText.text = "Time: " + Mathf.Round(curTime);
     }
 
     public void GetScore(int addScore)
     {
+        if (isGameOver) return;
         score += addScore;
         scoreText.text = "Score: " + score;
     }
