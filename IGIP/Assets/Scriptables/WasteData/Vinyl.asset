@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vinyl
   m_EditorClassIdentifier: 
   wasteName: Vinyl
-  wasteSound: {fileID: 0}
+  wasteSound: {fileID: 8300000, guid: 3e3ddf2c56f6c344e94adae4671b7123, type: 3}
   score: 1
   minSpeed: 0.5
   maxSpeed: 0.7

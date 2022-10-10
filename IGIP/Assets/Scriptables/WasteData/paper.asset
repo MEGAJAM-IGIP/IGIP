@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Paper
   m_EditorClassIdentifier: 
   wasteName: Paper
-  wasteSound: {fileID: 0}
+  wasteSound: {fileID: 8300000, guid: 46b9d7539bb3f3248b6b06cf71e8d4f7, type: 3}
   score: 3
   minSpeed: 0.7
   maxSpeed: 2
