@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class HandController : MonoBehaviour
 {
-    private float angle;
-    private Vector2 mouse;
+    private AudioSource audioSource;
+    public AudioClip shootingClip;
     
     public GameObject spear;
 
+    private float angle;
+    private Vector2 mouse;
     private float curTime;
     private float fireRate = 1f;
     
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
     
     void Update()
@@ -34,5 +36,6 @@ public class HandController : MonoBehaviour
     public void Shoot()
     {
         Instantiate(spear, transform.position, transform.rotation);
+        audioSource.PlayOneShot(shootingClip);
     }
 }
