@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasteData: {fileID: 11400000, guid: facabdc16e2d2c945bba3902def87099, type: 2}
   curSpeed: 0
-  moveDir: {x: -1, y: 0}
+  moveDir: {x: 1, y: 0}
 --- !u!61 &4574693773132699452
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
