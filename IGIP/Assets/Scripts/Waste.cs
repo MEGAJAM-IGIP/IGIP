@@ -25,7 +25,7 @@ public class Waste : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Spear"))
         {
-            audioSource.Play();
+            audioSource.PlayOneShot(wasteData.clip);
             Destroy(gameObject);
             GameManager.instance.GetScore(wasteData.score);
             
