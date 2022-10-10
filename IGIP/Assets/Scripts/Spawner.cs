@@ -33,8 +33,9 @@ public class Spawner : MonoBehaviour
         while (!GameManager.Instance.isGameOver)
         {
             int randNum = Random.Range(0, wastes.Length);
-            wastes[randNum].moveDir = moveDir;
-            Instantiate(wastes[randNum],ReturnRandomPos() , transform.rotation);
+            var waste = wastes[randNum];
+            waste.moveDir = moveDir;
+            Instantiate(waste, ReturnRandomPos(), transform.rotation).transform.SetParent(transform);
             yield return new WaitForSeconds(randWaitTime);
         }
     }
